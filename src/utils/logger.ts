@@ -1,10 +1,10 @@
 // utils/logger.ts
 export const log = {
-    auth: (...args: any[]) => console.info('[AUTH]', ...args),
-    firestore: (...args: any[]) => console.info('[FIRESTORE]', ...args),
-    router: (...args: any[]) => console.info('[ROUTER]', ...args),
-    error: (...args: any[]) => console.error('[ERROR]', ...args),
-    debug: (...args: any[]) => {
+    auth: (...args: unknown[]) => console.info('[AUTH]', ...args),
+    firestore: (...args: unknown[]) => console.info('[FIRESTORE]', ...args),
+    router: (...args: unknown[]) => console.info('[ROUTER]', ...args),
+    error: (...args: unknown[]) => console.error('[ERROR]', ...args),
+    debug: (...args: unknown[]) => {
       if (process.env.NEXT_PUBLIC_DEBUG === 'true') {
         console.debug('[DEBUG]', ...args);
       }
