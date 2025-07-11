@@ -5,10 +5,15 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
+    "export": "next export",
     "start": "next start",
     "lint": "next lint",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "deploy": "npm run build && npm run export && firebase deploy",
+    "deploy:staging": "firebase deploy --only hosting:staging",
+    "deploy:prod": "firebase deploy --only hosting:production",
+    "build:staging": "next build && next export"
   },
   "dependencies": {
     "firebase": "^11.10.0",

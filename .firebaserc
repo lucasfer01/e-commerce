@@ -1,0 +1,18 @@
+{
+  "projects": {
+    "default": "e-commerce",
+    "staging": "e-commerce-testing"
+  },
+  "targets": {
+    "e-commerce": {
+      "hosting": {
+        "production": ["e-commerce-78b35"]
+      }
+    },
+    "e-commerce-testing": {
+      "hosting": {
+        "staging": ["e-commerce-testing"]
+      }
+    }
+  }
+}
