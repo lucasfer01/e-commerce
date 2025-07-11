@@ -1,0 +1,32 @@
+@use "../abstracts/variables" as *;
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.btn--primary {
+  background-color: map-get($colors, primary);
+  color: white;
+
+  &:hover {
+    background-color: map-get($colors, primary-hover);
+  }
+}
+
+.btn--outline {
+  border: 1px solid map-get($colors, primary);;
+  background: transparent;
+  color: map-get($colors, primary);
+
+  &:hover {
+    background-color: map-get($colors, primary);
+    color: white;
+  }
+}

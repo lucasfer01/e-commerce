@@ -1,0 +1,76 @@
+//
+// FLEX HELPERS
+//
+@mixin flex($justify: center, $align: center, $gap: 1rem, $direction: row) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+  }
+  
+  @mixin center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  //
+  // RESPONSIVE BREAKPOINTS
+  //
+  @mixin responsive($breakpoint) {
+    @if $breakpoint == xs {
+      @media (max-width: 480px) { @content; }
+    } @else if $breakpoint == sm {
+      @media (max-width: 640px) { @content; }
+    } @else if $breakpoint == md {
+      @media (max-width: 768px) { @content; }
+    } @else if $breakpoint == lg {
+      @media (max-width: 1024px) { @content; }
+    } @else if $breakpoint == xl {
+      @media (max-width: 1280px) { @content; }
+    }
+  }
+  
+  
+  //
+  // BUTTON RESET
+  //
+  @mixin button-reset {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+  }
+  
+  
+  //
+  // TEXT ELLIPSIS (overflow hidden para una línea)
+  //
+  @mixin ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  
+  //
+  // TRANSITION
+  //
+  @mixin transition($props: all, $duration: 0.3s, $ease: ease) {
+    transition: $props $duration $ease;
+  }
+  
+
+  @mixin visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+  }
+  
