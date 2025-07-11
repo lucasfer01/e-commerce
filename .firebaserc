@@ -1,6 +1,6 @@
 {
   "projects": {
-    "default": "e-commerce",
+    "default": "e-commerce-78b35",
     "staging": "e-commerce-testing"
   },
   "targets": {
