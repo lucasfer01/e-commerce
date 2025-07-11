@@ -6,13 +6,28 @@
   "targets": {
     "e-commerce": {
       "hosting": {
-        "production": ["e-commerce-78b35"]
+        "production": [
+          "e-commerce-78b35"
+        ]
       }
     },
     "e-commerce-testing": {
       "hosting": {
-        "staging": ["e-commerce-testing"]
+        "staging": [
+          "e-commerce-testing"
+        ]
+      }
+    },
+    "e-commerce-78b35": {
+      "hosting": {
+        "staging": [
+          "e-commerce-testing"
+        ],
+        "production": [
+          "e-commerce-78b35"
+        ]
       }
     }
-  }
+  },
+  "etags": {}
 }
